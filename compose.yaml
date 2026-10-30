@@ -1,0 +1,20 @@
+services:
+  tailscale:
+    image: tailscale/tailscale:latest
+    container_name: tailscale-a
+    hostname: node-a
+    environment:
+      - TS_AUTHKEY=${TS_AUTHKEY}
+      - TS_HOSTNAME=node-a
+      - TS_STATE_DIR=/var/lib/tailscale
+    volumes:
+      - tailscale-a-state:/var/lib/tailscale
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+
+volumes:
+  tailscale-a-state:
+
