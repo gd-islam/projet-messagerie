@@ -1,0 +1,3 @@
+ven. 30 oct 2026 12:15:47 CET
+pong from node-b (100.79.54.119) via 172.19.0.3:46979 in 0s
+pong from node-a (100.104.64.49) via 172.19.0.2:44604 in 0s
