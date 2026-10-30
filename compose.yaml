@@ -7,6 +7,7 @@ services:
       - TS_AUTHKEY=${TS_AUTHKEY}
       - TS_HOSTNAME=node-a
       - TS_STATE_DIR=/var/lib/tailscale
+      - TS_USERSPACE=false
     volumes:
       - tailscale-a-state:/var/lib/tailscale
     devices:
@@ -23,6 +24,7 @@ services:
       - TS_AUTHKEY=${TS_AUTHKEY}
       - TS_HOSTNAME=node-b
       - TS_STATE_DIR=/var/lib/tailscale
+      - TS_USERSPACE=false
     volumes:
       - tailscale-b-state:/var/lib/tailscale
     devices:
@@ -31,6 +33,19 @@ services:
       - NET_ADMIN
     restart: unless-stopped
 
+  bind9:
+    image: ubuntu/bind9:latest
+    container_name: bind9
+    volumes:
+      - ./config/bind9/named.conf:/etc/bind/named.conf:ro
+      - ./config/bind9/named.conf.options:/etc/bind/named.conf.options:ro
+      - ./config/bind9/named.conf.local:/etc/bind/named.conf.local:ro
+      - ./config/bind9/db.organisation-a.test:/var/lib/bind/db.organisation-a.test:ro
+    network_mode: "service:tailscale-a"
+    depends_on: [tailscale-a]
+    restart: unless-stopped
+
 volumes:
   tailscale-a-state:
   tailscale-b-state:
+

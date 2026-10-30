@@ -1,0 +1,11 @@
+zone "organisation-a.test" {
+	type primary;
+	file "/var/lib/bind/db.organisation-a.test";
+	allow-update {
+		none;
+	};
+	allow-transfer {
+		none;
+	};
+};
+

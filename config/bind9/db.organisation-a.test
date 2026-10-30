@@ -1,0 +1,19 @@
+$TTL 3600
+
+@   IN  SOA ns1.organisation-a.test. admin.organisation-a.test. (
+        2026103001 ; Serial
+        3600       ; Refresh
+        900        ; Retry
+        604800     ; Expire
+        300        ; Negative Cache TTL
+)
+
+; Name server
+@       IN  NS      ns1.organisation-a.test.
+
+; Address records
+ns1     IN  A       100.104.64.49
+mail    IN  A       100.104.64.49
+
+; Mail exchanger
+@       IN  MX 10   mail.organisation-a.test.

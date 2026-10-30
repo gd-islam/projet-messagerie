@@ -1,0 +1,64 @@
+ven. 30 oct 2026 17:26:28 CET
+zone organisation-a.test/IN: loaded serial 2026103001
+zone organisation-a.test/IN: loaded serial 2026103001
+OK
+ven. 30 oct 2026 17:29:55 CET
+NAME          IMAGE                        COMMAND                  SERVICE       CREATED         STATUS         PORTS
+bind9         ubuntu/bind9:latest          "docker-entrypoint.sh"   bind9         5 minutes ago   Up 5 minutes   
+tailscale-a   tailscale/tailscale:latest   "/usr/local/bin/cont…"   tailscale-a   5 hours ago     Up 5 hours     
+tailscale-b   tailscale/tailscale:latest   "/usr/local/bin/cont…"   tailscale-b   5 hours ago     Up 5 hours     
+bind9  | Starting named...
+bind9  | exec /usr/sbin/named -u "bind" "-g" ""
+bind9  | 30-Oct-2026 16:23:58.712 starting BIND 9.20.11-0ubuntu0.2-Ubuntu (Stable Release) <id:>
+bind9  | 30-Oct-2026 16:23:58.712 running on Linux x86_64 7.0.0-38-generic #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:10:14 UTC 2026
+bind9  | 30-Oct-2026 16:23:58.712 built with  '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=${prefix}/include' '--mandir=${prefix}/share/man' '--infodir=${prefix}/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-option-checking' '--disable-silent-rules' '--libdir=${prefix}/lib/x86_64-linux-gnu' '--runstatedir=/run' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libdir=/usr/lib/x86_64-linux-gnu' '--sysconfdir=/etc/bind' '--with-python=python3' '--localstatedir=/' '--enable-threads' '--enable-largefile' '--with-libtool' '--enable-shared' '--disable-static' '--with-gost=no' '--with-openssl=/usr' '--with-gssapi=yes' '--with-libidn2' '--with-json-c' '--with-lmdb=/usr' '--with-gnu-ld' '--with-maxminddb' '--with-atf=no' '--enable-ipv6' '--enable-rrl' '--enable-filter-aaaa' '--disable-native-pkcs11' '--with-zonedb=rbtdb' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O3 -Werror=implicit-function-declaration -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/bind9-wgEN2X/bind9-9.20.11=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/bind9-wgEN2X/bind9-9.20.11=/usr/src/bind9-1:9.20.11-0ubuntu0.2 -fno-strict-aliasing -fno-delete-null-pointer-checks -DNO_VERSION_DATE -DDIG_SIGCHASE' 'LDFLAGS=-Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=3'
+bind9  | 30-Oct-2026 16:23:58.712 running as: named -u bind -g
+bind9  | 30-Oct-2026 16:23:58.712 compiled by GCC 14.2.0
+bind9  | 30-Oct-2026 16:23:58.712 compiled with OpenSSL version: OpenSSL 3.4.1 11 Feb 2025
+bind9  | 30-Oct-2026 16:23:58.712 linked to OpenSSL version: OpenSSL 3.4.1 11 Feb 2025
+bind9  | 30-Oct-2026 16:23:58.712 compiled with libuv version: 1.50.0
+bind9  | 30-Oct-2026 16:23:58.712 linked to libuv version: 1.50.0
+bind9  | 30-Oct-2026 16:23:58.712 compiled with liburcu version: 0.15.1
+bind9  | 30-Oct-2026 16:23:58.712 compiled with jemalloc version: 5.3.0
+bind9  | 30-Oct-2026 16:23:58.712 compiled with libnghttp2 version: 1.64.0
+bind9  | 30-Oct-2026 16:23:58.712 linked to libnghttp2 version: 1.64.0
+bind9  | 30-Oct-2026 16:23:58.712 compiled with libxml2 version: 2.9.14
+bind9  | 30-Oct-2026 16:23:58.712 linked to libxml2 version: 20914
+bind9  | 30-Oct-2026 16:23:58.712 compiled with json-c version: 0.18
+bind9  | 30-Oct-2026 16:23:58.712 linked to json-c version: 0.18
+bind9  | 30-Oct-2026 16:23:58.712 compiled with zlib version: 1.3.1
+bind9  | 30-Oct-2026 16:23:58.712 linked to zlib version: 1.3.1
+bind9  | 30-Oct-2026 16:23:58.712 linked to maxminddb version: 1.12.2
+bind9  | 30-Oct-2026 16:23:58.712 ----------------------------------------------------
+bind9  | 30-Oct-2026 16:23:58.712 BIND 9 is maintained by Internet Systems Consortium,
+bind9  | 30-Oct-2026 16:23:58.712 Inc. (ISC), a non-profit 501(c)(3) public-benefit 
+bind9  | 30-Oct-2026 16:23:58.712 corporation.  Support and training for BIND 9 are 
+bind9  | 30-Oct-2026 16:23:58.712 available at https://www.isc.org/support
+bind9  | 30-Oct-2026 16:23:58.712 ----------------------------------------------------
+bind9  | 30-Oct-2026 16:23:58.712 adjusted limit on open files from 1024 to 524288
+bind9  | 30-Oct-2026 16:23:58.712 found 8 CPUs, using 8 worker threads
+bind9  | 30-Oct-2026 16:23:58.715 DNSSEC algorithms: RSASHA1 NSEC3RSASHA1 RSASHA256 RSASHA512 ECDSAP256SHA256 ECDSAP384SHA384 ED25519 ED448
+bind9  | 30-Oct-2026 16:23:58.715 DS algorithms: SHA-1 SHA-256 SHA-384
+bind9  | 30-Oct-2026 16:23:58.715 HMAC algorithms: HMAC-MD5 HMAC-SHA1 HMAC-SHA224 HMAC-SHA256 HMAC-SHA384 HMAC-SHA512
+bind9  | 30-Oct-2026 16:23:58.715 TKEY mode 2 support (Diffie-Hellman): no
+bind9  | 30-Oct-2026 16:23:58.715 TKEY mode 3 support (GSS-API): yes
+bind9  | 30-Oct-2026 16:23:58.719 the initial working directory is '/'
+bind9  | 30-Oct-2026 16:23:58.719 loading configuration from '/etc/bind/named.conf'
+bind9  | 30-Oct-2026 16:23:58.719 /etc/bind/named.conf.options:2: option 'directory' contains relative path 'var/cache/bind'
+bind9  | 30-Oct-2026 16:23:58.719 the working directory is now '/var/cache/bind'
+bind9  | 30-Oct-2026 16:23:58.720 looking for GeoIP2 databases in '/usr/share/GeoIP'
+bind9  | 30-Oct-2026 16:23:58.720 using default UDP/IPv4 port range: [32768, 60999]
+bind9  | 30-Oct-2026 16:23:58.720 using default UDP/IPv6 port range: [32768, 60999]
+bind9  | 30-Oct-2026 16:23:58.721 listening on IPv4 interface lo, 127.0.0.1#53
+bind9  | 30-Oct-2026 16:23:58.722 listening on IPv4 interface eth0, 172.19.0.2#53
+bind9  | 30-Oct-2026 16:23:58.722 Disabling periodic interface re-scans timer
+bind9  | 30-Oct-2026 16:23:58.722 generating session key for dynamic DNS
+bind9  | 30-Oct-2026 16:23:58.723 not using config file logging statement for logging due to -g option
+bind9  | 30-Oct-2026 16:23:58.724 configuring command channel from '/etc/bind/rndc.key'
+bind9  | 30-Oct-2026 16:23:58.724 command channel listening on 127.0.0.1#953
+bind9  | 30-Oct-2026 16:23:58.724 configuring command channel from '/etc/bind/rndc.key'
+bind9  | 30-Oct-2026 16:23:58.724 command channel listening on ::1#953
+bind9  | 30-Oct-2026 16:23:58.724 zone organisation-a.test/IN: loaded serial 2026103001
+bind9  | 30-Oct-2026 16:23:58.724 all zones loaded
+bind9  | 30-Oct-2026 16:23:58.725 FIPS mode is disabled
+bind9  | 30-Oct-2026 16:23:58.725 running
