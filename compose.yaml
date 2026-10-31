@@ -45,6 +45,14 @@ services:
     depends_on: [tailscale-a]
     restart: unless-stopped
 
+  mail-a:
+    image: organisation-a-mail:1.0
+    container_name: mail-a
+    network_mode: "service:tailscale-a"
+    depends_on:
+      - tailscale-a
+    restart: unless-stopped
+
 volumes:
   tailscale-a-state:
   tailscale-b-state:

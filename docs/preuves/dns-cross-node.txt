@@ -1,0 +1,7 @@
+sam. 31 oct 2026 09:47:34 CET
+=== Test MX ===
+organisation-a.test.	3600	IN	MX	10 mail.organisation-a.test.
+=== Test A ===
+mail.organisation-a.test. 3600	IN	A	100.104.64.49
+=== Test NS ===
+organisation-a.test.	3600	IN	NS	ns1.organisation-a.test.
