@@ -1,0 +1,11 @@
+mar. 03 nov 2026 11:59:01 CET
+smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+smtpd_sasl_auth_enable = no
+smtpd_sasl_path = private/auth
+smtpd_sasl_security_options = noanonymous
+smtpd_sasl_type = dovecot
+submission/inet/smtpd_relay_restrictions = permit_sasl_authenticated,reject
+submission/inet/smtpd_sasl_auth_enable = yes
+submission/inet/smtpd_tls_auth_only = yes
+submission/inet/smtpd_tls_security_level = encrypt
+submission/inet/syslog_name = postfix/submission

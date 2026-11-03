@@ -51,6 +51,10 @@ services:
     network_mode: "service:tailscale-a"
     depends_on:
       - tailscale-a
+    volumes:
+      - ./config/postfix/main.cf:/etc/postfix/main.cf:ro
+      - ./config/postfix/maps:/etc/postfix/maps
+      - ./config/postfix/master.cf:/etc/postfix/master.cf:ro
     restart: unless-stopped
 
 volumes:

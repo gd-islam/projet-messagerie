@@ -1,0 +1,34 @@
+myhostname=mail.organisation-a.test
+mydomain=organisation-a.test
+myorigin=$mydomain
+
+inet_interfaces = all
+inet_protocols = ipv4
+
+mydestination = $myhostname, localhost.$mydomain, localhost
+
+mynetworks = 127.0.0.0/8
+
+smtpd_relay_restrictions = 
+	permit_mynetworks,
+	permit_sasl_authenticated,  
+	reject_unauth_destination
+
+smtpd_reject_unlisted_recipient = yes
+
+virtual_mailbox_domains = hash:/etc/postfix/maps/virtual_domains
+virtual_mailbox_maps = hash:/etc/postfix/maps/virtual_mailboxes
+
+compatibility_level = 3.6
+
+#dovecot sasl auth
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = no
+smtpd_sasl_security_options = noanonymous
+
+#nrslo vmailboxes messages to devcot LMTP
+virtual_transport = lmtp:unix:private/dovecot-lmtp
+
+#nrslo lchaque recepient whdo
+lmtp_destination_recipient_limit = 1

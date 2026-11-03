@@ -1,0 +1,9 @@
+lun. 02 nov 2026 19:37:08 CET
+inet_interfaces = all
+inet_protocols = ipv4
+mydestination = $myhostname, localhost.$mydomain, localhost
+mydomain = organisation-a.test
+myhostname = mail.organisation-a.test
+mynetworks = 127.0.0.0/8
+myorigin = $mydomain
+smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
