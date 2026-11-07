@@ -1,0 +1,58 @@
+ven. 06 nov 2026 20:11:26 CET
+Testing SMTP STARTTLS on port 25...
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:C=DZ, O=Organisation A, CN=mail.organisation-a.test
+   i:C=DZ, O=Projet Messagerie, CN=Projet Messagerie Root CA
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Nov  6 10:36:16 2026 GMT; NotAfter: Feb  8 10:36:16 2029 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIEwDCCAqigAwIBAgIUGQ0muHVivk/IaELfNS1FhE8nC9QwDQYJKoZIhvcNAQEL
+BQAwTTELMAkGA1UEBhMCRFoxGjAYBgNVBAoMEVByb2pldCBNZXNzYWdlcmllMSIw
+IAYDVQQDDBlQcm9qZXQgTWVzc2FnZXJpZSBSb290IENBMB4XDTI2MTEwNjEwMzYx
+NloXDTI5MDIwODEwMzYxNlowSTELMAkGA1UEBhMCRFoxFzAVBgNVBAoMDk9yZ2Fu
+aXNhdGlvbiBBMSEwHwYDVQQDDBhtYWlsLm9yZ2FuaXNhdGlvbi1hLnRlc3QwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCzgJap2M0r78b7jWxtUkGHceRf
+icuuVZtI9ocg5DXDIro5v1KXOTNrByD95IGZ7+UW+aadl0qqbubIyTRgqA12zgRa
+A6QjrHVHCtDcU5korMFigpP/gmuLQC+HIqQI/baU9KYE5/Cv+kGPuAHV6oXUEQcI
+pULv+Q0WXX1BkXvsopgEQCbHPW6zrfBrX3SoQhjFaaxwBB4ITfuus53pH/J5cmnr
+A4hajfpyW8/DkPzK50IBzfXcuCTNLxIkAckHPYCkDUxXkbGBCUB0+XsnLwr/PmLs
+Sz+u8q4ZOB9mtV/it46ZjId+7H60RU12dR1ZRd+CIWS/o/UoHUtxyJGRRqLlAgMB
+AAGjgZswgZgwDAYDVR0TAQH/BAIwADAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAww
+CgYIKwYBBQUHAwEwIwYDVR0RBBwwGoIYbWFpbC5vcmdhbmlzYXRpb24tYS50ZXN0
+MB0GA1UdDgQWBBTEaBZzbdrNsSdLnkeI1egtP+e/EzAfBgNVHSMEGDAWgBS7GLm3
+wxE1ygrg3SSYbppK/dpFBjANBgkqhkiG9w0BAQsFAAOCAgEAaAsmkpFRTe5qLamD
+Yp+b+W+kO/qLyMnavJg/W0vIwnENEm1Q+cwQJ6MEygNyeY7yD1V14Nn+vXIdL0mL
+4Ct3HyNsFW+arGwE1MjHzZeOrQil4+0E+kC7+PXovJhYTKbALyer4xAt8pcGLuXg
+tGGhOw8EdPB/jVf0pRKVIXq7Lk7vOynU9KhNqPCFATcFcHAzwJU84mcIo4YonJ5d
+qKz9nZ4JbgbibzujHwJX9D7fQxyJ+OjnFIJj6xtMeqkw4zZmBJTxOgMJIRX91YK1
+E9i4snhJsjPtfFof7b6hYYnBexRE15ulK3TVjEkaDlLiO+pBuwHdNYQsDSWQKCfg
+WqqNq2MzC6v+2HthywFs1A3pXW2ehi8BV478skgHJspOarITVqirMilf7Yjhcmtt
+Zfgo+DW/4gKiYcdnuFkfA+Fj5igRz7AG7aa2zjwXUQvNYzBHhVE+MNv8ugdyGi45
+VtvPIValwSRbCerL87O5GugPbALpXprzW5Uf5hSU5lUH2geOQCphN9I4QQrH7eZ/
+kjUUPKGTaX8+4e5JxX7L2yQjsuqkgHta1tUyo/p2YLqXh5FvMkCm07H+2jWgiKeQ
+aA20K1jx84cFW4LUOXpMiaK/6qrLMyw0/pK8Oj0+SLudqt88XywNx8HEu47o9YQd
+sMZ80euPB7qWPROcZS7YECBGLZM=
+-----END CERTIFICATE-----
+subject=C=DZ, O=Organisation A, CN=mail.organisation-a.test
+issuer=C=DZ, O=Projet Messagerie, CN=Projet Messagerie Root CA
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 2025 bytes and written 445 bytes
+Verification: OK
+Verified peername: mail.organisation-a.test
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Server public key is 2048 bit
+This TLS version forbids renegotiation.
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---

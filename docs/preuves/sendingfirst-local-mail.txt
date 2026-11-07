@@ -1,0 +1,26 @@
+ven. 06 nov 2026 11:21:33 CET
+
+Mail Delivery Status Report will be mailed to <alice@organisation-a.test>.
+
+c0a806313e9fed6a86010000994ea38a 1
+
+hdr.subject: First local test
+hdr.from: Alice <alice@organisation-a.test>
+hdr.to: Bob <bob@organisation-a.test>
+text:
+Return-Path: <alice@organisation-a.test>
+Delivered-To: bob@organisation-a.test
+Received: from mail.organisation-a.test
+	by node-a with LMTP
+	id BMiPMD6f7WqGAQAAmU6jig
+	(envelope-from <alice@organisation-a.test>)
+	for <bob@organisation-a.test>; Fri, 06 Nov 2026 09:34:54 +0000
+Received: by mail.organisation-a.test (Postfix, from userid 0)
+	id BF7B5380103; Fri,  6 Nov 2026 09:34:54 +0000 (UTC)
+From: Alice <alice@organisation-a.test>
+To: Bob <bob@organisation-a.test>
+Subject: First local test
+Message-Id: <20261106093454.BF7B5380103@mail.organisation-a.test>
+Date: Fri,  6 Nov 2026 09:34:54 +0000 (UTC)
+
+Hello Bob, this is our first local email test.

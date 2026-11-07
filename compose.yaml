@@ -55,9 +55,16 @@ services:
       - ./config/postfix/main.cf:/etc/postfix/main.cf:ro
       - ./config/postfix/maps:/etc/postfix/maps
       - ./config/postfix/master.cf:/etc/postfix/master.cf:ro
+      - ./config/dovecot/10-auth.conf:/etc/dovecot/conf.d/10-auth.conf:ro
+      - ./config/dovecot/99-project.conf:/etc/dovecot/conf.d/99-project.conf:ro
+      - ./config/dovecot/users:/etc/dovecot/users:ro
+      - ./data/mail:/var/mail/vhosts
+      - ./certs/mail-a/mail-a.crt:/etc/dovecot/certs/mail-a.crt:ro
+      - ./certs/mail-a/mail-a.key:/etc/dovecot/private/mail-a.key:ro
+      - ./certs/mail-a/mail-a.crt:/etc/postfix/mail-a.crt:ro
+      - ./certs/mail-a/mail-a.key:/etc/postfix/mail-a.key:ro
     restart: unless-stopped
 
 volumes:
   tailscale-a-state:
   tailscale-b-state:
-

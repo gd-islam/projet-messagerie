@@ -1,0 +1,5 @@
+ven. 06 nov 2026 20:15:02 CET
+Testing IMAPS authentication on port 993...
+Alice password:
+PASS: IMAPS authentication accepted.
+Mailbox list: OK [b'(\\HasNoChildren) "." INBOX']

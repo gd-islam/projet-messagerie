@@ -16,6 +16,13 @@ smtpd_relay_restrictions =
 
 smtpd_reject_unlisted_recipient = yes
 
+smtpd_tls_cert_file = /etc/postfix/mail-a.crt
+smtpd_tls_key_file = /etc/postfix/mail-a.key
+
+smtpd_tls_security_level = may
+
+smtpd_tls_loglevel = 1
+
 virtual_mailbox_domains = hash:/etc/postfix/maps/virtual_domains
 virtual_mailbox_maps = hash:/etc/postfix/maps/virtual_mailboxes
 

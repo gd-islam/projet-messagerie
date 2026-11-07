@@ -1,0 +1,7 @@
+ven. 06 nov 2026 10:02:52 CET
+passdb: organisation-a.test auth failed
+extra fields:
+  user=organisation-a.test
+passdb: alice@organisation-a.test auth succeeded
+extra fields:
+  user=alice@organisation-a.test

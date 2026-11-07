@@ -2,3 +2,18 @@
 *.key
 *.pem
 secrets/
+
+# TLS private keys and certificate requests
+/certs/**/*.key
+/certs/**/*.csr
+
+# Environment variants
+.env.*
+!.env.example
+
+# Mail accounts and mailbox data
+/config/dovecot/users
+/data/mail/
+
+# Local configuration backups
+/config/postfix/main.cf.save
