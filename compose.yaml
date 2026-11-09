@@ -46,6 +46,8 @@ services:
     restart: unless-stopped
 
   mail-a:
+    build:
+      context: ./config/mail
     image: organisation-a-mail:1.0
     container_name: mail-a
     network_mode: "service:tailscale-a"

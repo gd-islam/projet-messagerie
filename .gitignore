@@ -1,22 +1,11 @@
-.env
-*.key
-*.pem
-secrets/
-
-# TLS private keys and certificate requests
-/certs/**/*.key
-/certs/**/*.csr
-
-# Environment variants
-.env.*
-!.env.example
-
-# Mail accounts and mailbox data
-/config/dovecot/users
-/data/mail/
-
-# Local configuration backups
-/config/postfix/main.cf.save
-
+# Python
 __pycache__/
 *.py[cod]
+
+# Local backups and certificate requests
+/config/postfix/main.cf.save
+/certs/**/*.csr
+
+# Runtime mail contents (keep only the empty directory)
+/data/mail/*
+!/data/mail/.gitkeep
