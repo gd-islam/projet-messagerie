@@ -1,0 +1,4 @@
+ven. 06 nov 2026 20:14:10 CET
+Testing SMTP authentication on port 587...
+Alice password:
+PASS: SMTP authentication accepted.

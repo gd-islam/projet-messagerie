@@ -1,0 +1,3 @@
+Connecting to Postfix on localhost:25...
+
+RESULT: Message was accepted by SMTP.

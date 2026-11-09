@@ -1,4 +1,11 @@
-.env
-*.key
-*.pem
-secrets/
+# Python
+__pycache__/
+*.py[cod]
+
+# Local backups and certificate requests
+/config/postfix/main.cf.save
+/certs/**/*.csr
+
+# Runtime mail contents (keep only the empty directory)
+/data/mail/*
+!/data/mail/.gitkeep

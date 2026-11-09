@@ -1,0 +1,5 @@
+MODULE 9 - CROSS-NODE DNS
+2026-11-09T17:50:31+01:00
+mail.organisation-a.test. 3600	IN	A	100.104.64.49
+organisation-a.test.	3600	IN	MX	10 mail.organisation-a.test.
+organisation-a.test.	3600	IN	NS	ns1.organisation-a.test.
