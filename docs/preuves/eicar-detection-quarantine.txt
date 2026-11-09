@@ -1,0 +1,22 @@
+EICAR ANTIVIRUS INTEGRATION TEST
+================================
+
+Sender: alice@organisation-a.test
+Recipient: bob@organisation-a.test
+Subject: EICAR SMTP rejection test
+
+Results:
+- Postfix initially accepted the SMTP transaction (250).
+- Amavis processed the message.
+- ClamAV detected the EICAR signature.
+- The infected message was quarantined by Amavis.
+- The original message was not delivered to Bob.
+- Postfix queue was empty after processing.
+- No delivery failure notification was found in Alice's mailbox.
+
+Virus policy:
+final_virus_destiny = D_REJECT
+
+Conclusion:
+Virus detection and quarantine verified.
+SMTP rejection and sender notification not independently verified.

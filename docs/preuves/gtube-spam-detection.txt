@@ -1,0 +1,10 @@
+===== GTUBE SPAM DETECTION EVIDENCE =====
+Date: Mon Nov  9 16:30:17 UTC 2026
+
+X-Virus-Scanned: Debian amavis at organisation-a.test
+X-Spam-Flag: YES
+X-Spam-Score: 1000.799
+X-Spam-Status: Yes, score=1000.799 tagged_above=2 required=6.31
+From: Alice <alice@organisation-a.test>
+To: Bob <bob@organisation-a.test>
+Subject: [SPAM] GTUBE corrected integration test

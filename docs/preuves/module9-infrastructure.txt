@@ -1,0 +1,10 @@
+MODULE 9 - INFRASTRUCTURE
+========================
+Docker Compose: valid
+Services: tailscale-a, tailscale-b, bind9, mail-a, filter-a running
+Tailscale A: 100.104.64.49
+Tailscale B: 100.79.54.119
+A -> B ping: successful
+B -> A ping: successful
+Warning: Tailscale container health check reports missing iptables filter table / unavailable kernel modules.
+Limitation: both Tailscale nodes currently run as containers on the same physical Ubuntu host.

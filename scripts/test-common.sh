@@ -7,7 +7,7 @@ TEST_IMAGE="projet-messagerie-tester:1.0"
 SERVER_IP="100.104.64.49"
 MAIL_HOST="mail.organisation-a.test"
 MAIL_USER="alice@organisation-a.test"
-CA_CERT="$HOME/projet-messagerie-private/ca/ca.crt"
+CA_CERT="$SCRIPT_DIR/../certs/ca/organisation-root-ca.crt"
 
 check_test_environment() {
     command -v docker >/dev/null 2>&1 || {

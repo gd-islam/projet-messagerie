@@ -1,0 +1,49 @@
+MODULE 9 — SMTP SECURITY
+2026-11-09T17:52:41+01:00
+
+===== SUBMISSION SERVICE =====
+submission inet  n       -       y       -       -       smtpd -o syslog_name=postfix/submission -o smtpd_tls_security_level=encrypt -o smtpd_sasl_auth_enable=yes -o smtpd_tls_auth_only=yes -o smtpd_relay_restrictions=permit_sasl_authenticated,reject
+
+===== POSTFIX RELAY POLICY =====
+smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+
+===== DOVECOT TLS POLICY =====
+required
+yes
+
+===== 587 AUTH CAPABILITY =====
+Connecting to 127.0.0.1
+depth=1 C=DZ, O=Projet Messagerie, CN=Projet Messagerie Root CA
+verify return:1
+depth=0 C=DZ, O=Organisation A, CN=mail.organisation-a.test
+verify return:1
+250 CHUNKING
+250-mail.organisation-a.test
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-AUTH PLAIN LOGIN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-SMTPUTF8
+250 CHUNKING
+221 2.0.0 Bye
+
+===== UNAUTHENTICATED RELAY REJECTION =====
+220 mail.organisation-a.test ESMTP Postfix
+250-mail.organisation-a.test
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-SMTPUTF8
+250 CHUNKING
+250 2.1.0 Ok
+554 5.7.1 <relay-check@example.net>: Relay access denied
+221 2.0.0 Bye

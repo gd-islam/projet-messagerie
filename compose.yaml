@@ -65,6 +65,19 @@ services:
       - ./certs/mail-a/mail-a.key:/etc/postfix/mail-a.key:ro
     restart: unless-stopped
 
+  filter-a:
+    build:
+      context: ./config/filter
+    image: organisation-a-filter:1.0
+    container_name: filter-a
+    network_mode: "service:tailscale-a"
+    depends_on:
+      - tailscale-a
+    volumes:
+      - clamav-db:/var/lib/clamav
+    restart: unless-stopped
+
 volumes:
   tailscale-a-state:
   tailscale-b-state:
+  clamav-db:
