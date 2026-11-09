@@ -17,3 +17,6 @@ secrets/
 
 # Local configuration backups
 /config/postfix/main.cf.save
+
+__pycache__/
+*.py[cod]
